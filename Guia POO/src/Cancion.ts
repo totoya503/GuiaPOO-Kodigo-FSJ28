@@ -2,27 +2,30 @@
 
 
 export class Cancion {
-  public titulo: string;
-  public genero: string;
-  private _autor: string;
+public titulo: string;
+public genero: string;
+private _autor: string;
 
-  constructor(titulo: string, genero: string) {
-    this.titulo = titulo;
-    this.genero = genero;
-    this._autor = "";
-  }
+constructor(titulo: string, genero: string) {
+this.titulo = titulo;
+this.genero = genero;
+this._autor = "";
+}
 
-  get autor(){
+//se retorna el autor
+get autor(){
     return this._autor;
-  }
+}
 
-  set autor(nombre: string){
+//se asigna el autor
+set autor(nombre: string){
     this._autor = nombre;
-  }
+}
 
-  mostrarDatos(){
-    console.log(`Título: ${this.titulo}`);
-    console.log(`Género: ${this.genero}`);
-    console.log(`Autor: ${this._autor}`);
-  }
+//Muestra los datos de la cancion
+mostrarDatos(){
+    console.log(`Título: ${this.titulo},
+Género: ${this.genero},
+Autor: ${this._autor}`);
+}
 }
